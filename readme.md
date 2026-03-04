@@ -1,57 +1,43 @@
---- c/Users/clrtj/Desktop/Telegram-HTML/the-cube/README.md
-+++ c/Users/clrtj/Desktop/Telegram-HTML/the-cube/README.md
-@@ -0,0 +1,88 @@
-+# Cubo Zero
-+
-+**Cubo Zero** é um simulador de Cubo Mágico 3D interativo e de alta performance, desenvolvido para rodar diretamente no navegador. O projeto combina renderização gráfica avançada via WebGL com uma interface de usuário (UI) minimalista e responsiva, oferecendo uma experiência completa tanto para *speedcubers* quanto para entusiastas casuais.
-+
-+## 📋 Visão Geral do Projeto
-+
-+O objetivo do Cubo Zero é fornecer uma plataforma digital para a prática de resolução de cubos mágicos, com foco na fidelidade visual, personalização estética e rastreamento de estatísticas de desempenho. A aplicação é construída sobre a biblioteca **Three.js**, garantindo fluidez nas animações e física de rotação.
-+
-+## 🚀 Funcionalidades Técnicas
-+
-+### Mecânica do Cubo
-+*   **Dimensões Variáveis:** Suporte para múltiplas ordens de complexidade, permitindo alternar entre cubos 2x2, 3x3, 4x4 e 5x5.
-+*   **Algoritmo de Embaralhamento:** Sistema de *scramble* configurável (20, 25 ou 30 movimentos) para garantir estados iniciais aleatórios e válidos.
-+*   **Física de Rotação:** Três modos de animação de giro configuráveis:
-+    *   *Swift:* Rápido e linear.
-+    *   *Smooth:* Suave com aceleração/desaceleração.
-+    *   *Bounce:* Com efeito elástico ao final do movimento.
-+
-+### Interface e Visualização
-+*   **Câmera Dinâmica:** Alternância entre projeção **Ortográfica** (2D/Isométrica) e **Perspectiva** (3D realista) para melhor adaptação visual do usuário.
-+*   **Temas e Personalização:**
-+    *   5 temas pré-definidos (*Cube, Erno, Dust, Camo, Rain*).
-+    *   Editor de cores granular (HSL - Matiz, Saturação, Luminosidade) para ajuste fino dos materiais do cubo.
-+*   **Design Responsivo:** Interface adaptada para dispositivos móveis e desktop, com prevenção de *tap-highlight* e *user-select* para interações de toque otimizadas.
-+
-+### Sistema de Estatísticas
-+O sistema mantém um registro detalhado do desempenho do usuário:
-+*   Cronômetro de precisão.
-+*   Detecção automática de conclusão ("Solucionado!").
-+*   Cálculo de médias móveis (Ao5, Ao12, Ao25).
-+*   Registro de melhor e pior tempo.
-+
-+## 🛠️ Tecnologias Utilizadas
-+
-+*   **HTML5 Semantic:** Estruturação da aplicação e contêineres de UI.
-+*   **CSS3:** Estilização avançada com uso de Flexbox, posicionamento absoluto para *overlays*, transições de opacidade e fontes customizadas (BungeeFont via Base64).
-+*   **JavaScript (ES6+):** Lógica de controle de estado e manipulação do DOM.
-+*   **Three.js (r95):** Motor gráfico para renderização do ambiente 3D, malhas (meshes), materiais e iluminação.
-+
-+## 🎨 Aspectos de Design
-+
-+A interface do usuário (UI) foi projetada para ser não intrusiva. Os menus de configuração (`.ui__prefs`, `.ui__theme`) e estatísticas (`.ui__stats`) operam em camadas sobrepostas ao canvas 3D, utilizando transições suaves para aparecer e desaparecer. A tipografia utiliza a fonte *Bungee*, conferindo um aspecto moderno e geométrico que harmoniza com a natureza cúbica do projeto.
-+
-+## 🔧 Instalação e Execução
-+
-+Como se trata de uma aplicação *client-side* estática, não é necessário instalação de dependências de backend.
-+
-+> **Nota:** Para o carregamento correto de texturas ou fontes locais (se houverem alterações futuras), recomenda-se rodar através de um servidor local (ex: Live Server do VSCode ou Python SimpleHTTPServer) para evitar bloqueios de política CORS.
-+
-+## 👤 Autor
-+
-+Desenvolvido por **Cleomar da Silva**.
-+&copy; 2025 **NexusCleo**.
-+```
+# Cubo Zero
+
+Bem-vindo ao **Cubo Zero**, um simulador de Cubo Mágico 3D interativo, bonito e fácil de usar, que roda diretamente no seu navegador de internet.
+
+Seja você um mestre em resolver cubos mágicos ou alguém que apenas quer passar o tempo exercitando a mente, este projeto foi feito para você.
+
+## 🎮 O que é este projeto?
+
+O Cubo Zero traz o clássico quebra-cabeça físico para o mundo digital. Ele simula com realismo os movimentos e a lógica de um cubo mágico real, mas com vantagens que só o digital permite, como mudar as cores instantaneamente, desfazer movimentos e cronometrar suas soluções automaticamente.
+
+## ✨ Funcionalidades Principais
+
+Aqui está o que você pode fazer no Cubo Zero:
+
+*   **Escolha seu Desafio:** Não se limite ao padrão. Você pode escolher entre cubos **2x2** (mais fácil), **3x3** (clássico), **4x4** e **5x5** (para especialistas).
+*   **Visual do Seu Jeito:**
+    *   **Temas:** Escolha entre vários esquemas de cores prontos (como "Erno", "Dust", "Camo").
+    *   **Editor de Cores:** Crie seu próprio cubo escolhendo exatamente a cor de cada face.
+    *   **Câmera:** Mude a visualização entre 3D realista (Perspectiva) ou visualização técnica (Ortográfica).
+*   **Estatísticas de Jogo:** O jogo conta automaticamente quanto tempo você leva para resolver e salva seus melhores tempos e médias.
+*   **Controles Suaves:**
+    *   **Girar o Cubo:** Arraste o dedo ou mouse na área de fundo.
+    *   **Girar uma Face:** Arraste o dedo ou mouse diretamente sobre as peças do cubo.
+    *   **Zoom:** Use o gesto de pinça ou a roda do mouse.
+
+## 🕹️ Como Jogar
+
+1.  **Iniciar:** Ao abrir o jogo, você verá o cubo montado. Dê um **toque duplo** na tela (ou clique duplo) para embaralhar as peças.
+2.  **Resolver:** Use o mouse ou o dedo para girar as linhas e colunas até que todas as faces do cubo tenham uma única cor.
+3.  **Menu:** Botões na parte inferior da tela permitem acessar configurações, estatísticas e temas.
+
+## 🚀 Como abrir o jogo
+
+Você não precisa instalar programas complexos.
+
+1.  Baixe os arquivos do projeto.
+2.  Procure pelo arquivo chamado `index.html`.
+3.  Dê um clique duplo nele. O jogo abrirá automaticamente no seu navegador de internet (Chrome, Firefox, Edge, etc.).
+
+## 👤 Autor
+
+Desenvolvido por **Cleomar da Silva**.
+&copy; 2025 **NexusCleo**.
